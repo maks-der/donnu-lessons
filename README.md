@@ -9,7 +9,7 @@ lesson_0 - first app in JavaScript
 0. Вступ до Node.js та JavaScript. Налаштування середи розробки. Система контроля версій Git та GitHub. Перша програма.
 1. Основи JavaScript. Змінні та типи даних. Математичні оператори, оператори привласнення та логічні оператори.
 2. Основи JavaScript. Умовне розгалуження: if, else, else if. Тернарний оператор. Конструкція switch.
-3. Основи JavaScript. Цикли while, do while, for.
+3. Основи JavaScript. Масиви. Цикли while, do while, for.
 4. Основи JavaScript. Функції в JS. Приведення типів.
 5. Об'єкти.
 6. Робота з різними типами даних. Map і Set. JSON.

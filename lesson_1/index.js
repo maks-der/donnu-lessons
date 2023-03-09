@@ -1,14 +1,17 @@
 // У коді коментарі позначаються двома шляхами
 
-// Це однорядковий коментар
+// 1. Це однорядковий коментар
 
 /* 
-        Це
-        багаторядковий
-        коментар
+    2.
+    Це
+    багаторядковий
+    коментар
 */
+console.clear(); // очистка консолі
 
 // Виведення в консоль:
+console.log(123);
 console.log("Hello, Applied Linguistics!");
 console.log("My", "name", "is", "Maks!");
 
@@ -18,6 +21,8 @@ title = "Star Wars";
 
 let userName = "Alex";
 let userAge = 37;
+console.log('title:', title);
+title = "Harry Potter";
 console.log('title:', title);
 console.log('userName:', userName);
 console.log('userAge:', userAge);
@@ -56,7 +61,7 @@ console.log(integer);
 console.log(float);
 
 // BigInt
-let num = 9007199254740991;
+let num = 9007199254740991; // type Number
 console.log("NOT BigInt:", num);
 console.log("NOT BigInt:", num + 1);
 console.log("NOT BigInt:", num + 2);
@@ -87,13 +92,16 @@ isAlive = undefined;
 console.log("isAlive:", isAlive);
 
 // Object
-const student = {
+let student = {};
+console.log(student);
+student = {
     firstName: "Ivan",
     lastName: "Kovalenko",
     age: 20,
     spec: "Applied Linguistics",
     course: 3,
 };
+console.log(student);
 console.log("student.firstName:", student.firstName);
 console.log("student.lastName:", student.lastName);
 console.log("student.age:", student.age);
@@ -122,9 +130,13 @@ console.log(typeof id);
 
 id = "45";
 console.log(typeof id);
+id = {UUID: 1231423}
+console.log(typeof id);
+
 console.log(typeof null);
 
-// Математичні оператори
+
+// // Математичні оператори
 
 let x = 10 + 50; // додавання
 let y = 100 - 30; // віднімання
@@ -147,17 +159,17 @@ let num1 = 10;
 const preInc = ++num1;
 console.log('preInc:', preInc);
 
-let num2 = 10;
+let num2 = 10; // 10
 const postInc = num2++;
-console.log('postInc:', postInc);
+console.log('postInc:', postInc, " num2:", num2);
 
 let num3 = 10;
-const preDec = --num1;
+const preDec = --num3;
 console.log('preDec:', preDec);
 
 let num4 = 10;
-const postDec = num2--;
-console.log('postDec:', postDec);
+const postDec = num4--;
+console.log('postDec:', postDec, " num4:", num2);
 
 
 // Виконання математичних операцій
@@ -191,7 +203,7 @@ console.log("1 <= 1", 1 <= 1);
 console.log("20 >= 24", 20 >= 24);
 console.log("320 >= 250", 320 >= 250);
 
-// Логічні оператори
+// // Логічні оператори
 console.log("false && false = ", false && false);
 console.log("true && false = ", true && false);
 console.log("false && true = ", false && true);
@@ -207,8 +219,8 @@ console.log("!false = ", !false);
 
 // Оператори привласнення
 let sum = 23;
-sum += 5;
-console.log("23 + 6 =", sum);
+sum += 5; // sum = sum + 5
+console.log("23 + 5 =", sum);
 
 let sub = 28;
 sub -= 10;
