@@ -76,6 +76,31 @@ switch(num){
         break;
 }
 
-// 
+// [1]?[2]:[3]
+const a = 1;
+const b = 2;
 
-// Examples:
+const res1 = a < b ? a: b;
+const res2 = a < b ? a + b : a - b;
+
+console.log(res1);
+console.log(res2);
+
+// ??
+console.log("hello" ?? "world");
+console.log(0 ?? 5);
+console.log("" ?? "javascript");
+console.log(false ?? true);
+console.log(null ?? "not null");
+console.log(undefined ?? "defined");
+
+// ??=
+let message = "Welcome to JavaScript";
+let text = "Hello work!"
+text ??= message;
+console.log(text);
+
+message = "Welcome to JavaScript";
+text = null;
+text ??= message;
+console.log(text);
