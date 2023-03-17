@@ -35,7 +35,6 @@ if (num > 0) {
 }
 
 // num = 20;
-
 if (num > 0 && num < 10) {
     console.log("Число більше 0");
 } else if (num > 10 && num < 20) {
@@ -48,6 +47,7 @@ if (num > 0 && num < 10) {
     console.log("Число меньше 0");
 }
 
+// num = 30;
 if (num > 0 && num <= 10) {
     console.log("Число більше 0");
 } else if (num > 10 && num <= 20) {
@@ -60,6 +60,7 @@ if (num > 0 && num <= 10) {
     console.log("Число меньше 0");
 }
 
+// num = 21;
 // switch
 switch(num){
     case 10 : 
@@ -77,22 +78,38 @@ switch(num){
 }
 
 // [1]?[2]:[3]
-const a = 1;
+const a = 10;
 const b = 2;
 
-const res1 = a < b ? a: b;
-const res2 = a < b ? a + b : a - b;
+const res1 = (a < b) ? a : b;
 
-console.log(res1);
-console.log(res2);
+let result;
+if (a < b) {
+    result = a;
+} else {
+    result = b;
+}
+
+const res2 = (a < b) ? a + b : a - b;
+
+console.log("res1:", res1);
+console.log("result:", result);
+console.log("res2:", res2);
 
 // ??
-console.log("hello" ?? "world");
-console.log(0 ?? 5);
-console.log("" ?? "javascript");
-console.log(false ?? true);
-console.log(null ?? "not null");
-console.log(undefined ?? "defined");
+const sample1 = "hello" ?? "world";
+const sample2 = 0 ?? 5;
+const sample3 = "" ?? "javascript";
+const sample4 = false ?? true;
+const sample5 = null ?? "not null";
+const sample6 = undefined ?? "defined";
+
+console.log("sample1:", sample1);
+console.log("sample2:", sample2);
+console.log("sample3:", sample3);
+console.log("sample4:", sample4);
+console.log("sample5:", sample5);
+console.log("sample6:", sample6);
 
 // ??=
 let message = "Welcome to JavaScript";

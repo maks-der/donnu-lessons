@@ -15,6 +15,7 @@ const rl = readline.createInterface({
 
 // 1. Greeting
 (async () => {
+    // type String
     const name = await rl.question("What is your name?\n");
     console.log(`Hello, ${name}! Nice to see you!`);
     rl.close();
@@ -23,12 +24,14 @@ const rl = readline.createInterface({
 // 2. Check odd and even numbers
 (async () => {
     console.clear();
-    const number = await rl.question("Type yuor number: ");
+    const number = await rl.question("Type your number: ");
+    
     if (number % 2 == 0) {
         console.log("Your number is even");
     } else {
         console.log("Your number is odd");
     }
+    
     rl.close();
 })();
 
@@ -52,8 +55,9 @@ const rl = readline.createInterface({
     9.WhiteVine.
     `);
 
+    // type String
     const drinkNumber = await rl.question("What do you want to drink?\n");
-    const num = Number(drinkNumber)
+    const num = Number(drinkNumber); // type Number
     
     const isAlcohol = num == 1 || num == 3 || num == 4 || num == 5 || num == 8 || num == 9;
     let message;
