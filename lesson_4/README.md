@@ -144,28 +144,34 @@ callFunc(iAmParam);
 Функція `callFunc` приймає параметр `func`. `func` - представляє функцію, причому на момент визначення `callFunc` не важливо, що це буде за функція.
 
 #
-## Передача параметрів за значенням та за посиланням
+## Передавання параметрів за значенням та за посиланням
 
 `Рядки`, `числа`, `логічні` значення передаються у функцію за `значенням`. Іншими словами при передачі значення у функцію, ця функція отримує копію цього значення.
 
 ```javascript
-function changeFirst(value) {
-    value[0] = "X";
+function changeString(value) {
+    value = "X";
+    console.log("In function:", value);
 }
 
 let str = "Some string";
 console.log("before:", str);
-changeFirst(str);
+changeString(str);
 console.log("after:", str);
 ```
 
 `Об'єкти` та `масиви` передаються за `посиланням`. Тобто функція отримує сам об'єкт чи масив, а чи не їх копію.
 
 ```javascript
+function changeFirstInArray(value) {
+    value[0] = "X";
+    console.log("In function:", value);
+}
+
 let arr = [0, 1, 2, 3];
 
 console.log("before:", arr);
-changeFirst(arr);
+changeFirstInArray(arr);
 console.log("after:", arr);
 ```
 
