@@ -1,4 +1,9 @@
 
+console.log(10 + 25);
+console.log("10" + 25);
+console.log(10 + "25");
+console.log("10" + "25");
+
 /* parseInt та parseFloat */
 
 const numStr = "56";
@@ -22,6 +27,14 @@ console.log(parseInt(binary1, 2));
 console.log(parseInt(binary2, 2));
 console.log(parseInt(hex1, 16));
 console.log(parseInt(hex2, 16));
+
+/* NaN та isNaN() */
+
+console.log(parseInt("abc"));   // NaN
+console.log(typeof NaN);        // number
+
+console.log(isNaN("javascript")); // true
+console.log(isNaN("22")); //  false
 
 /* --- String --- */
 let str = "Some random string";
@@ -233,3 +246,19 @@ setTimeout(() => {
 
 
 /* --- Object --- */
+
+const dog = {
+    name: "Fluffy",
+    age: 2,
+    breed: "golden retriever",
+    bark: () => console.log("Woof!"),
+};
+
+console.log(Object.keys(dog));
+
+console.log(Object.values(dog));
+console.log(Object.entries(dog));
+  
+for (const [key, value] of Object.entries(dog)) {
+    console.log(`key: ${key}, value: ${value}`);
+}
