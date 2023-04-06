@@ -4,12 +4,15 @@ console.log("10" + 25);
 console.log(10 + "25");
 console.log("10" + "25");
 
-/* parseInt та parseFloat */
+/* String, parseInt та parseFloat */
 
 const numStr = "56";
 const int = 4;
-const numStrWithText = "123Text";
+const numStrWithText = "100$";
 const floatStr = "39.547";
+
+console.log(String(int));
+console.log(typeof String(int));
 
 console.log(parseInt(numStr)); // 57
 console.log(parseInt(int)); // 4
@@ -41,14 +44,18 @@ let str = "Some random string";
 
 console.log(str.length);
 
-console.log(str[0], str.at(0));
-console.log(str[str.length - 1], str.at(-1));
+console.log(str[0]);
+console.log(str.at(5));
+
+console.log(str[str.length - 1]);
+console.log(str.at(-1));
 
 console.log(str.indexOf("S"));
 console.log(str.indexOf("s"));
+console.log(str.indexOf("m"));
 
-console.log(str.toLocaleLowerCase());
-console.log(str.toLocaleUpperCase());
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
 
 console.log(str.includes("random"));
 console.log(str.includes("text"));
@@ -63,6 +70,7 @@ const concatenated = str.concat("Added text");
 console.log(concatenated);
 
 console.log(str.replace(" ", "_"));
+console.log(str.replace(/ /g , "_"));
 console.log(str.slice(0, 10));
 console.log(str.split(" "));
 console.log(str.split("r"));
@@ -78,6 +86,7 @@ console.log(num.toFixed(3));
 console.log(num.toExponential());
 
 console.log(num.toString());
+console.log(typeof num.toString());
 
 
 /* --- Symbol --- */
@@ -94,6 +103,7 @@ console.log(sym1.description);
 const arr = [0, 1, 2, 3, "banana", "apple", "orange", true];
 
 console.log(typeof arr);
+console.log(typeof arr === "object");
 console.log(Array.isArray(arr));
 
 console.log(arr.length);
@@ -101,10 +111,13 @@ console.log(arr.at(5));
 console.log(arr.at(-1));
 
 console.log(arr.indexOf("banana"));
+console.log(arr.indexOf(1));
+console.log(arr.indexOf("1"));
 
 console.log(arr.concat([0.5, 0, 23, "Alex", "Tom"]));
 
 console.log(arr.includes("orange"));
+console.log(arr.includes("mint"));
 
 console.log(arr.toString());
 console.log(arr.join());
@@ -217,7 +230,7 @@ console.log(Math.round(3.99999));
 console.log(Math.round(0.5));
 
 console.log(Math.random());
-console.log(Math.round(Math.random() * 10));
+console.log(Math.round(Math.random() * 10000));
 
 console.log(Math.max(-123,25,47));
 console.log(Math.min(345,534,-2));
@@ -255,8 +268,8 @@ const dog = {
 };
 
 console.log(Object.keys(dog));
-
 console.log(Object.values(dog));
+
 console.log(Object.entries(dog));
   
 for (const [key, value] of Object.entries(dog)) {
