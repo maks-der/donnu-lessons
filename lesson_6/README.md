@@ -154,7 +154,7 @@ JSON підтримує три типи даних:
 
 ```json
 {
-     "name": "Tom",
+     "name": "Alex",
      "married": true,
      "age": 30
 }
@@ -163,7 +163,7 @@ JSON підтримує три типи даних:
 
 ```javascript
 var user = {
-     name: "Tom",
+     name: "Alex",
      married: true,
      age: 30
 }
@@ -177,7 +177,7 @@ var user = {
 
 ```json
 {
-     "name": "Tom",
+     "name": "Alex",
      "married": true,
      "age": 30,
      "company": {
@@ -191,7 +191,7 @@ var user = {
 ```json
 
 [{
-     "name": "Tom",
+     "name": "Alex",
      "married": true,
      "age": 30
 }, {
@@ -205,18 +205,19 @@ var user = {
 
 Для серіалізації об'єкта `JavaScript` у `JSON` застосовується функція `JSON.stringify()`.
 Для зворотної операції - десеріалізації або парсингу `JSON`-об'єкта в javascript застосовується метод `JSON.parse()`:
-```javascript
 
+```javascript
 const user = {
-     name: "Tom",
+     name: "Alex",
      married: true,
      age: 30
 };
-const serializedUser = JSON.stringify(user);
-console.log(serializedUser); // {"name":"Tom","married":true,"age":30}
-console.log(typeof serializedUser); // string
 
-const tomUser = JSON.parse(serializedUser); 
-console.log(typeof tomUser); // object
-console.log(tomUser.name); // Tom
+const serializedUser = JSON.stringify(user);
+console.log(serializedUser);
+console.log(typeof serializedUser);
+
+const objUser = JSON.parse(serializedUser);
+console.log(objUser);
+console.log(typeof objUser);
 ```

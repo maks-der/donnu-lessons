@@ -11,7 +11,6 @@ const regExp = {
 function wordsInFile(filePath) {
     let text = fs.readFileSync(filePath, "utf-8");
     
-    
     text = text.replace(regExp.allLineBreaks, " ");
     text = text.replace(regExp.allPunctuationMarks,"")
 
@@ -34,10 +33,10 @@ function wordsInFile(filePath) {
 
 function vocabularyToTable(filePath) {
     const text = fs.readFileSync(filePath, "utf-8");
-    const words = text.replace(regExp.allLineBreaks, "\n").split("\n");
+    const wordsArray = text.replace(regExp.allLineBreaks, "\n").split("\n");
     const voc = new Map();
 
-    words.forEach((item) => {
+    wordsArray.forEach((item) => {
         const arr = item.split(":");
         voc.set(arr[0], arr[1]);
     });

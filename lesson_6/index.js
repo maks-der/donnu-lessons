@@ -14,6 +14,8 @@ console.log(numbers.size);
 numbers.add(100);
 console.log(numbers);
 
+numbers.add(100);
+numbers.add(2);
 numbers.add("Hello Set!");
 console.log(numbers);
 
@@ -22,10 +24,11 @@ console.log(numbers);
 
 const has100 = numbers.has(100);
 console.log(has100);
+console.log(numbers.has(123));
 
 numbers.forEach((value1, value2, set) => {
     console.log(value1, value2, set);
-})
+});
 
 const setKeys = numbers.keys();
 console.log(setKeys);
@@ -71,6 +74,8 @@ console.log(apple);
 
 const hasObject = newMap.has("object")
 console.log(hasObject);
+console.log(newMap.has("123"));
+
 
 newMap.forEach((value, key, map) => {
     console.log("Word:", key);
@@ -128,19 +133,17 @@ setInterval(() => {
      console.clear();
      logHidden(weakSet);
 
-     // console.log(c);
-     // console.log(cpp);
-     // console.log(cShapr);
-     // console.log(java);
-     // console.log(js);
-     // console.log(ts);
+     console.log(c);
+     console.log(cpp);
+     console.log(cShapr);
+     console.log(java);
+     console.log(js);
+     console.log(ts);
 }, 1000);
 
 
 
 /* --- WeakMap --- */
-
-
 
 let cKey = { key: "C" };
 let cppKey = { key: "C++" };
@@ -179,30 +182,34 @@ console.log(weakMap.has(jsKey));
 console.log(weakMap.has(tsKey));
 
 jsKey = null;
+cKey = null;
+cppKey = null;
 
 setInterval(() => {
      console.clear();
      logHidden(weakMap);
 
-     // console.log(cKey);
-     // console.log(cppKey);
-     // console.log(cSharpKey);
-     // console.log(javaKey);
-     // console.log(jsKey);
-     // console.log(tsKey);
+     console.log(cKey);
+     console.log(cppKey);
+     console.log(cSharpKey);
+     console.log(javaKey);
+     console.log(jsKey);
+     console.log(tsKey);
 }, 1000);
 
 
 /* --- JSON --- */
 const user = {
-     name: "Tom",
+     name: "Alex",
      married: true,
      age: 30
 };
+
 const serializedUser = JSON.stringify(user);
 console.log(serializedUser);
 console.log(typeof serializedUser);
 
-const tomUser = JSON.parse(serializedUser);
-console.log(tomUser);
-console.log(typeof tomUser);
+const objUser = JSON.parse(serializedUser);
+console.log(objUser);
+console.log(typeof objUser);
+
