@@ -8,7 +8,7 @@ console.log(getRequest("article"));
 
 async function main() {
     /* ----- async / await ----- */
-    // const user = await getRequest("user");
+    const user = await getRequest("user");
     console.log(user);
     
     const news = await getRequest("news");

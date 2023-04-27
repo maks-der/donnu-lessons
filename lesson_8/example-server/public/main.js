@@ -56,7 +56,7 @@
                 renderUserData(data[0]);
                 renderNews(data[1]);
                 renderArticle(data[2]);
-            });
+        });
     }
 
     main();

@@ -7,14 +7,13 @@ try {
     console.log("Before error");
     callSomeFunc(); // Виклик неіснуючої функції
     console.log("After error");
-} catch (e) {
-    console.log("Error:", e);
+} catch (error) {
+    console.log("---> Error:", error);
 } finally {
-    console.log("Finally block")
+    console.log("Finally block");
 }
 
 console.log("After try...catch...finaly");
-
 
 /* ----- Створення помилок ----- */
 function devide(num1, num2) {
@@ -25,9 +24,13 @@ function devide(num1, num2) {
 devide(100, 0);
 
 /* ----- Callback ----- */
+console.log("Before Timer");
+
 setTimeout(() => {
     console.log("Hello from callback!");
-}, 1000);
+}, 6000);
+
+console.log("After Timer");
 
 
 /* ----- Promise ----- */
@@ -102,15 +105,21 @@ new Promise(resolve => resolve("Hello"))
 
 /* ----- Promise.all ----- */
 const promise2 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 1000, "Hello");
+    setTimeout(() => {
+        resolve("Hello")
+    }, 2000);
 });
 const promise3 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 500, "World");
+    setTimeout(() => {
+        resolve("World")
+    }, 2000);
 });
 Promise.all([promise2, promise3]).then(values => {
     values.forEach((val) => {
         console.log(val);
     });
+}).catch((e) => {
+    console.log(e);
 });
 
 
