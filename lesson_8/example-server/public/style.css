@@ -1,0 +1,74 @@
+body{
+    /* display: flex; */
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(167, 167, 196);
+    padding: 0;
+    margin: 0;
+}
+
+#user {
+    display: flex;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+    background-color: rgb(38, 35, 85);
+    padding: 2rem;
+}
+
+#content {
+    background-color: rgb(235, 235, 235);
+
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#news {
+    padding: 1rem;
+    width: auto;
+}
+
+.news > img {
+    width: 18rem;
+}
+
+#article {
+    padding: 1rem;
+    width: auto;
+    overflow-x: auto;
+}
+.text{
+    text-align: justify;
+}
+
+#article > img {
+    width: 100%;
+}
+
+.title {
+    color: rgb(16, 16, 58);
+    font-size: 2.5rem;
+}
+
+.date {
+    font-style: italic;
+    color: rgb(150, 150, 150);
+}
+
+.description {
+    font-weight: bold;
+}
+
+.news > .title {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.news > .date {
+    font-size: 0.7rem;
+    margin: 0.2rem;
+}
+.news > .description {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 0.85rem;
+}
