@@ -1,0 +1,14 @@
+{
+  "name": "lesson_11",
+  "version": "1.0.0",
+  "description": "1. Generic types (узагальнюючі типи)\r 1. Статичні поля та методи",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
