@@ -5,6 +5,11 @@ interface IInfo {
     description?: string;
 }
 
+const info: IInfo = {
+    title: "Title",
+    description: "This is description"
+}
+
 interface IShape extends IInfo {
     getPerimeter(): number;
     getArea(): number;
@@ -18,20 +23,28 @@ const shape: IShape = {
 }
 
 /* ----- Абстрактні класи ----- */
-abstract class GeometricFigure implements IShape {
-    // constructor (
-    //     private title: string,
-    // ) {}
 
-    getPerimeter(): number {
+/* 
+                     |- Rectangle  
+    GeometricFigure -|- Triangle
+                     |- Circle
+*/
+abstract class GeometricFigure implements IShape {
+    // message: string = "Hi, Im GeometricFigure!";
+
+    constructor (
+        public title: string,
+    ) {}
+
+    public getPerimeter(): number {
         return 0;
     }
-    getArea(): number {
+    public getArea(): number {
         return 0;
     }
-    // print(): void {
-    //     console.log(`Figure: ${this.title}\nPerimeter: ${this.getPerimeter()}\nArea: ${this.getArea()}`);
-    // }
+    public print(): void {
+        console.log(`Figure: ${this.title}\nPerimeter: ${this.getPerimeter()}\nArea: ${this.getArea()}\n`);
+    }
 }
 
 
@@ -41,7 +54,7 @@ class Rectangle extends GeometricFigure {
     y: number = 0;
 
     constructor(x: number, y: number) {
-        super();
+        super("Rectangle");
 
         this.x = x;
         this.y = y;
@@ -56,6 +69,13 @@ class Rectangle extends GeometricFigure {
     }
 }
 
+// const rec1: Rectangle = new Rectangle(10, 12);
+
+// console.log(rec1.x);
+// console.log(rec1.y);
+// console.log(rec1.getArea());
+// console.log(rec1.getPerimeter());
+
 
 /* ----- Модифікатори доступу ----- */
 class Triangle extends GeometricFigure {
@@ -64,7 +84,7 @@ class Triangle extends GeometricFigure {
     private c: number = 0;
 
     constructor(a: number, b: number, c: number) {
-        super();
+        super("Triangle");
 
         this.a = a;
         this.b = b;
@@ -80,11 +100,18 @@ class Triangle extends GeometricFigure {
     }
 }
 
+// const myTriangle: Triangle = new Triangle(3,4,5);
+
+
+// console.log(myTriangle.getArea());
+// console.log(myTriangle.getPerimeter());
+
+
 class Circle extends GeometricFigure {
     constructor(
-        private radius: number,
+        public radius: number,
     ) {
-        super();
+        super("Circle");
     }
 
     getArea(): number {
@@ -96,6 +123,16 @@ class Circle extends GeometricFigure {
     }
 }
 
+// const circle = new Circle(5.5);
+// console.log(circle.getArea());
+// console.log(circle.getPerimeter());
+const rec = new Rectangle(45,78);
+const tri = new Triangle(7,32,14);
+const cir = new Circle(78);
+
+rec.print();
+tri.print();
+cir.print();
 
 class BaseClass {
     public readonly title = "I'm base class!"; 
@@ -118,3 +155,5 @@ class DerivedClass extends BaseClass {
         return super.MessageForDerivedClass();
     }
 }
+
+const dClass = new DerivedClass("msg");

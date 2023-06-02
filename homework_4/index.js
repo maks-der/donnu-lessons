@@ -12,8 +12,18 @@
 */
 
 function setPrefixSuper(str) {
-    // Код тут
+    // if (str === undefined) return null;
+    // return "Super" + str;
+
+    if (str === undefined) {
+        // return null;
+    } else {
+        return "Super" + str;
+    }
 }
+
+// const result = setPrefixSuper("124gur");
+// console.log(result);
 
 /*  
     2. Зведення числа у ступінь
@@ -28,7 +38,13 @@ function setPrefixSuper(str) {
 */
 
 function pow(num, deg) {
-    // Код тут
+    if(num === undefined || deg === undefined) return null;
+
+    let result = 1;
+    for (let i = 0; i < deg; i++) {
+        result *= num;
+    }
+    return result;
 }
 
 
@@ -44,8 +60,12 @@ function pow(num, deg) {
     arr - масив
 */
 
-function revertArray(arr) {
-    // Код тут
+function revertArray(arr = []) {
+    const result = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        result.push(arr[i]);
+    }
+    return result
 }
 
 
