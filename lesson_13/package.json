@@ -1,0 +1,27 @@
+{
+  "name": "lesson_13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mongo-example": "nodemon mongo-example/server.ts",
+    "express-example": "node express-example.js",
+    "http-example": "node http-example.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.2",
+    "node": "^18.16.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^18.16.16",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22"
+  }
+}
